@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">wang17-FeelsBook</string>
+    <string name="joy">Joy</string>
+    <string name="love">Love</string>
+    <string name="surprise">Surprise</string>
+    <string name="anger">Anger</string>
+    <string name="sadness">Sadness</string>
+    <string name="fear">Fear</string>
+    <string name="question">What\'s up dude?</string>
+    <string name="history">History Of My Emotions</string>
+    <string name="joy_count">0</string>
+    <string name="love_count">0</string>
+    <string name="sadness_count">0</string>
+    <string name="fear_count">0</string>
+    <string name="surprise_count">0</string>
+    <string name="anger_count">0</string>
+</resources>

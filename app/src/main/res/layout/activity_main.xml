@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/myview"
+    tools:context=".MainActivity">
+
+
+    <Button
+        android:id="@+id/joy"
+        android:layout_width="130dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="92dp"
+        android:background="@drawable/mybutton"
+        android:onClick="record"
+        android:text="@string/joy"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toStartOf="@+id/joy_count"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/love"
+        android:layout_width="130dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/mybutton"
+        android:onClick="record"
+        android:text="@string/love"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toStartOf="@+id/love_count"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/joy" />
+
+    <Button
+        android:id="@+id/anger"
+        android:layout_width="130dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="44dp"
+        android:background="@drawable/mybutton"
+        android:onClick="record"
+        android:text="@string/anger"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toStartOf="@+id/anger_count"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/love" />
+
+    <Button
+        android:id="@+id/fear"
+        android:layout_width="130dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="44dp"
+        android:background="@drawable/mybutton"
+        android:onClick="record"
+        android:text="@string/fear"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toStartOf="@+id/fear_count"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/anger" />
+
+    <Button
+        android:id="@+id/surprise"
+        android:layout_width="130dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/mybutton"
+        android:onClick="record"
+        android:text="@string/surprise"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toStartOf="@+id/surprise_count"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fear" />
+
+    <Button
+        android:id="@+id/sadness"
+        android:layout_width="130dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/mybutton"
+        android:onClick="record"
+        android:text="@string/sadness"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toStartOf="@+id/sadness_count"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/surprise" />
+
+    <Button
+        android:id="@+id/history"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/mybutton"
+        android:text="@string/history"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.552"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.938" />
+
+    <TextView
+        android:id="@+id/love_count"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/mybutton"
+        android:gravity="center"
+        android:text="@string/love_count"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/love"
+        app:layout_constraintTop_toBottomOf="@+id/joy_count" />
+
+    <TextView
+        android:id="@+id/joy_count"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="92dp"
+        android:background="@drawable/mybutton"
+        android:gravity="center"
+        android:text="@string/joy_count"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/joy"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/anger_count"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="44dp"
+        android:background="@drawable/mybutton"
+        android:gravity="center"
+        android:text="@string/anger_count"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/anger"
+        app:layout_constraintTop_toBottomOf="@+id/love_count" />
+
+    <TextView
+        android:id="@+id/fear_count"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="44dp"
+        android:background="@drawable/mybutton"
+        android:gravity="center"
+        android:text="@string/fear_count"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/fear"
+        app:layout_constraintTop_toBottomOf="@+id/anger_count" />
+
+    <TextView
+        android:id="@+id/surprise_count"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/mybutton"
+        android:gravity="center"
+        android:text="@string/surprise_count"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/surprise"
+        app:layout_constraintTop_toBottomOf="@+id/fear_count" />
+
+    <TextView
+        android:id="@+id/sadness_count"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="44dp"
+        android:background="@drawable/mybutton"
+        android:gravity="center"
+        android:text="@string/sadness_count"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/sadness"
+        app:layout_constraintTop_toBottomOf="@+id/surprise_count" />
+
+    <TextView
+        android:id="@+id/question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/question"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</android.support.constraint.ConstraintLayout>
