@@ -13,7 +13,7 @@
         android:layout_width="130dp"
         android:layout_height="40dp"
         android:layout_marginStart="52dp"
-        android:layout_marginTop="92dp"
+        android:layout_marginTop="36dp"
         android:background="@drawable/mybutton"
         android:onClick="record"
         android:text="@string/joy"
@@ -21,14 +21,14 @@
         app:layout_constraintEnd_toStartOf="@+id/joy_count"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/question" />
 
     <Button
         android:id="@+id/love"
         android:layout_width="130dp"
         android:layout_height="40dp"
         android:layout_marginStart="52dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="32dp"
         android:background="@drawable/mybutton"
         android:onClick="record"
         android:text="@string/love"
@@ -43,7 +43,7 @@
         android:layout_width="130dp"
         android:layout_height="40dp"
         android:layout_marginStart="52dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="32dp"
         android:background="@drawable/mybutton"
         android:onClick="record"
         android:text="@string/anger"
@@ -56,9 +56,9 @@
     <Button
         android:id="@+id/fear"
         android:layout_width="130dp"
-        android:layout_height="40dp"
+        android:layout_height="45dp"
         android:layout_marginStart="52dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="32dp"
         android:background="@drawable/mybutton"
         android:onClick="record"
         android:text="@string/fear"
@@ -73,7 +73,7 @@
         android:layout_width="130dp"
         android:layout_height="45dp"
         android:layout_marginStart="52dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="32dp"
         android:background="@drawable/mybutton"
         android:onClick="record"
         android:text="@string/surprise"
@@ -88,7 +88,7 @@
         android:layout_width="130dp"
         android:layout_height="45dp"
         android:layout_marginStart="52dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="32dp"
         android:background="@drawable/mybutton"
         android:onClick="record"
         android:text="@string/sadness"
@@ -100,18 +100,19 @@
 
     <Button
         android:id="@+id/history"
-        android:layout_width="200dp"
+        android:layout_width="230dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/mybutton"
         android:text="@string/history"
+        android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.552"
+        app:layout_constraintHorizontal_bias="0.568"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.938" />
+        app:layout_constraintTop_toBottomOf="@+id/sadness"
+        app:layout_constraintVertical_bias="0.626" />
 
     <TextView
         android:id="@+id/love_count"
@@ -119,7 +120,7 @@
         android:layout_height="40dp"
         android:layout_marginEnd="24dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="36dp"
         android:background="@drawable/mybutton"
         android:gravity="center"
         android:text="@string/love_count"
@@ -136,7 +137,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="24dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="92dp"
+        android:layout_marginTop="36dp"
         android:background="@drawable/mybutton"
         android:gravity="center"
         android:text="@string/joy_count"
@@ -145,7 +146,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/joy"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/question" />
 
     <TextView
         android:id="@+id/anger_count"
@@ -153,7 +154,7 @@
         android:layout_height="40dp"
         android:layout_marginEnd="24dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="32dp"
         android:background="@drawable/mybutton"
         android:gravity="center"
         android:text="@string/anger_count"
@@ -170,7 +171,7 @@
         android:layout_height="40dp"
         android:layout_marginEnd="24dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="36dp"
         android:background="@drawable/mybutton"
         android:gravity="center"
         android:text="@string/fear_count"
@@ -204,7 +205,7 @@
         android:layout_height="40dp"
         android:layout_marginEnd="24dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="36dp"
         android:background="@drawable/mybutton"
         android:gravity="center"
         android:text="@string/sadness_count"
