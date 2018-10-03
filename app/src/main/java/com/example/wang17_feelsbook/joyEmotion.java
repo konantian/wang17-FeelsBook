@@ -1,10 +1,13 @@
 package com.example.wang17_feelsbook;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.AppCompatImageView;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.text.DateFormat;
@@ -27,14 +30,13 @@ public class joyEmotion extends AppCompatActivity {
         // get emotion passed from the MainActivity
         Intent intent= getIntent();
         String emotion=intent.getStringExtra("emotion");
+        display_emoji(emotion);
 
         // set the Edittext and TextViews to the appropriate layout objects via the findViewId method
-        //TextView tv = findViewById(R.id.emotion);
-        EditText editText= findViewById(R.id.joy_comment);
+        EditText editText= findViewById(R.id.comment);
         //TextView edate=findViewById(R.id.date);
 
         // set the textView's character sequence to the value passed into the activity
-        //tv.setText(emotion);
 
         // create a new datetime object with the specified assignment format and set the date objects text
         Date date = new Date();
@@ -46,19 +48,44 @@ public class joyEmotion extends AppCompatActivity {
 
     }
 
+    public void display_emoji(String emotion){
+        ImageView image= (ImageView) findViewById(R.id.emoji);
+        if(emotion.equals("joy")){
+            image.setImageResource(R.drawable.joy);
+        }
+
+        if(emotion.equals("love")){
+            image.setImageResource(R.drawable.love);
+        }
+
+        if(emotion.equals("fear")){
+            image.setImageResource(R.drawable.fear);
+        }
+
+        if(emotion.equals("anger")){
+            image.setImageResource(R.drawable.anger);
+        }
+
+        if(emotion.equals("surprise")){
+            image.setImageResource(R.drawable.surprise);
+        }
+
+        if(emotion.equals("sadness")){
+            image.setImageResource(R.drawable.sadness);
+        }
+    }
     public void cancel(View view){
 
         // launch an intent to return to the home screen
-        Intent intent = new Intent(joyEmotion.this, MainActivity.class);
-        startActivity(intent);
+        //Intent intent = new Intent(joyEmotion.this, MainActivity.class);
+        //startActivity(intent);
+        finish();
     }
 
     public void post(View view){
 
-        // launch an intent to return to the home screen
-        Intent intent = new Intent(joyEmotion.this, MainActivity.class);
-        startActivityForResult(intent,1);
-        startActivity(intent);
+        setResult(RESULT_OK);
+        finish();
     }
 
 }

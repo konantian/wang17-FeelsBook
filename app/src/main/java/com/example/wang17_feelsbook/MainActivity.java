@@ -55,6 +55,44 @@ public class MainActivity extends AppCompatActivity{
 
     }
 
+    @Override
+    protected void onActivityResult(int requestCode,int resultCode,Intent data){
+        if(requestCode == 1){
+            if(resultCode == RESULT_OK){
+                update_count("joy");
+            }
+        }
+
+        if(requestCode == 2){
+            if(resultCode == RESULT_OK){
+                update_count("love");
+            }
+        }
+
+        if(requestCode == 3){
+            if(resultCode == RESULT_OK){
+                update_count("fear");
+            }
+        }
+
+        if(requestCode == 4){
+            if(resultCode == RESULT_OK){
+                update_count("anger");
+            }
+        }
+
+        if(requestCode == 5){
+            if(resultCode == RESULT_OK){
+                update_count("sadness");
+            }
+        }
+
+        if(requestCode == 6){
+            if(resultCode == RESULT_OK){
+                update_count("surprise");
+            }
+        }
+    }
     public void record_feels(View view){
         switch (view.getId()) {
             // in the case of the joy button being clicked
@@ -64,49 +102,60 @@ public class MainActivity extends AppCompatActivity{
                 // the clicking of this button creates a new intent which takes the user to the emotion entry activity
                 Intent joy_intent = new Intent(MainActivity.this, joyEmotion.class);
                 // pass the joy value designated to the button to the emotion entry activity via its key "emotion"
-                joy_intent.putExtra("counter",counter);
+                joy_intent.putExtra("emotion","joy");
                 // start the activity
-                startActivity(joy_intent);
-                //counter.set(0,counter.get(0)+1);
-                TextView joy_text = findViewById(R.id.joy_count);
-                counter.set(0,counter.get(0)+1);
-                joy_text.setText(String.format("%s",counter.get(0)));
+                startActivityForResult(joy_intent,1);
                 // break from the case so the sequence does not continue onto other cases
                 break;
 
             // each case will perform almost identical methods but will differ in their count IDs & values and the exported message
-            //case R.id.sadness:
-            //    Intent sad_intent = new Intent(MainActivity.this, sadnessEmotion.class);
-            //    sad_intent.putExtra("emotion","Sadness");
-            //    startActivity(sad_intent);
-            //    break;
+            case R.id.sadness:
+                Intent sadness_intent = new Intent(MainActivity.this, joyEmotion.class);
+                sadness_intent.putExtra("emotion","sadness");
+                startActivityForResult(sadness_intent,5);
+                break;
 
             case R.id.love:
-                Intent love_intent = new Intent(MainActivity.this, loveEmotion.class);
-                love_intent.putExtra("emotion","Love");
-                startActivity(love_intent);
+                // the clicking of this button creates a new intent which takes the user to the emotion entry activity
+                Intent love_intent = new Intent(MainActivity.this, joyEmotion.class);
+                // pass the joy value designated to the button to the emotion entry activity via its key "emotion"
+                love_intent.putExtra("emotion","love");
+                // start the activity
+                startActivityForResult(love_intent,2);
+                // break from the case so the sequence does not continue onto other cases
                 break;
-            /*
+
             case R.id.anger:
-                Intent anger_intent = new Intent(MainActivity.this, angerEmotion.class);
-                anger_intent.putExtra("emotion","Anger");
-                startActivity(anger_intent);
+                // the clicking of this button creates a new intent which takes the user to the emotion entry activity
+                Intent anger_intent = new Intent(MainActivity.this, joyEmotion.class);
+                // pass the joy value designated to the button to the emotion entry activity via its key "emotion"
+                anger_intent.putExtra("emotion","anger");
+                // start the activity
+                startActivityForResult(anger_intent,4);
+                // break from the case so the sequence does not continue onto other cases
                 break;
 
             case R.id.surprise:
-                Intent surprise_intent = new Intent(MainActivity.this, supriseEmotion.class);
-                surprise_intent.putExtra("emotion","Surprise");
-                startActivity(surprise_intent);
+                // the clicking of this button creates a new intent which takes the user to the emotion entry activity
+                Intent surprise_intent = new Intent(MainActivity.this, joyEmotion.class);
+                // pass the joy value designated to the button to the emotion entry activity via its key "emotion"
+                surprise_intent.putExtra("emotion","surprise");
+                // start the activity
+                startActivityForResult(surprise_intent,6);
+                // break from the case so the sequence does not continue onto other cases
                 break;
 
             case R.id.fear:
-                Intent fear_intent = new Intent(MainActivity.this, fearEmotion.class);
-                fear_intent.putExtra("emotion","Fear");
-                startActivity(fear_intent);
+                // the clicking of this button creates a new intent which takes the user to the emotion entry activity
+                Intent fear_intent = new Intent(MainActivity.this, joyEmotion.class);
+                // pass the joy value designated to the button to the emotion entry activity via its key "emotion"
+                fear_intent.putExtra("emotion","fear");
+                // start the activity
+                startActivityForResult(fear_intent,3);
+                // break from the case so the sequence does not continue onto other cases
                 break;
-                */
+
         }
-        setResult(RESULT_OK);
         saveInFile(counter);
 
     }
@@ -160,7 +209,7 @@ public class MainActivity extends AppCompatActivity{
 
                 break;
         }
-        setResult(RESULT_OK);
+        //setResult(RESULT_OK);
         saveInFile(counter);
         //finish();
 
