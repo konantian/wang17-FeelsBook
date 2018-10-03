@@ -14,4 +14,7 @@
     <string name="fear_count">0</string>
     <string name="surprise_count">0</string>
     <string name="anger_count">0</string>
+    <string name="comment">Wannna add some comments ?</string>
+    <string name="cancel">Cancel</string>
+    <string name="post">Post</string>
 </resources>

@@ -16,7 +16,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".EmotionEntry"></activity>
+        <activity android:name=".EmotionEntry" />
+        <activity android:name=".loveEmotion" />
+        <activity android:name=".joyEmotion"></activity>
     </application>
 
 </manifest>

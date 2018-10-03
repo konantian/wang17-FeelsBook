@@ -7,20 +7,8 @@
     android:background="@drawable/postview"
     tools:context=".joyEmotion">
 
-    <ImageView
-        android:id="@+id/joy_emoji"
-        android:layout_width="125dp"
-        android:layout_height="125dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="44dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/joy" />
-
     <EditText
-        android:id="@+id/joy_comment"
+        android:id="@+id/love_comment"
         android:layout_width="292dp"
         android:layout_height="80dp"
         android:layout_marginBottom="16dp"
@@ -48,7 +36,7 @@
         app:layout_constraintEnd_toStartOf="@+id/post"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/joy_comment"
+        app:layout_constraintTop_toBottomOf="@+id/love_comment"
         app:layout_constraintVertical_bias="0.061" />
 
     <Button
@@ -61,4 +49,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/cancel" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:layout_marginTop="52dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/love" />
 </android.support.constraint.ConstraintLayout>
