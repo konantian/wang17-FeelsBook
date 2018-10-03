@@ -1,7 +1,9 @@
 package com.example.wang17_feelsbook;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Display;
 import android.view.View;
 import android.widget.TextView;
 
@@ -24,7 +26,7 @@ public class MainActivity extends AppCompatActivity{
     private static final String FILENAME = "file.sav";
     protected static ArrayList<Integer> counter = new ArrayList<>();
     /* initialize a data transfer manager */
-
+    public static final String EXTRA_MESSAGE = "com.example.wang17_feelsbook.MESSAGE";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +57,53 @@ public class MainActivity extends AppCompatActivity{
 
     }
 
+    public void record_feels(View view){
+        switch (view.getId()) {
+            // in the case of the joy button being clicked
+
+            case R.id.joy:
+                // the clicking of this button creates a new intent which takes the user to the emotion entry activity
+                Intent joy_intent = new Intent(MainActivity.this, EmotionEntry.class);
+                // pass the joy value designated to the button to the emotion entry activity via its key "emotion"
+                joy_intent.putExtra("emotion","Joy");
+                // start the activity
+                startActivity(joy_intent);
+                // break from the case so the sequence does not continue onto other cases
+                break;
+
+            // each case will perform almost identical methods but will differ in their count IDs & values and the exported message
+            case R.id.sadness:
+                Intent sad_intent = new Intent(MainActivity.this, EmotionEntry.class);
+                sad_intent.putExtra("emotion","Sadness");
+                startActivity(sad_intent);
+                break;
+
+            case R.id.love:
+                Intent love_intent = new Intent(MainActivity.this, EmotionEntry.class);
+                love_intent.putExtra("emotion","Love");
+                startActivity(love_intent);
+                break;
+
+            case R.id.anger:
+                Intent anger_intent = new Intent(MainActivity.this, EmotionEntry.class);
+                anger_intent.putExtra("emotion","Anger");
+                startActivity(anger_intent);
+                break;
+
+            case R.id.surprise:
+                Intent surprise_intent = new Intent(MainActivity.this, EmotionEntry.class);
+                surprise_intent.putExtra("emotion","Surprise");
+                startActivity(surprise_intent);
+                break;
+
+            case R.id.fear:
+                Intent fear_intent = new Intent(MainActivity.this, EmotionEntry.class);
+                fear_intent.putExtra("emotion","Fear");
+                startActivity(fear_intent);
+                break;
+        }
+
+    }
 
     public void record(View view){
         TextView joy_text = findViewById(R.id.joy_count);
