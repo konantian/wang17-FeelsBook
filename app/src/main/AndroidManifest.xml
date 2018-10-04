@@ -18,7 +18,8 @@
         </activity>
         <activity android:name=".EmotionEntry" />
         <activity android:name=".loveEmotion" />
-        <activity android:name=".joyEmotion"></activity>
+        <activity android:name=".joyEmotion" />
+        <activity android:name=".history"></activity>
     </application>
 
 </manifest>

@@ -24,6 +24,13 @@ public class MainActivity extends AppCompatActivity{
 
     private static final String FILENAME = "file.sav";
     protected static ArrayList<Integer> counter = new ArrayList<>();
+
+    private TextView joy_text;
+    private TextView love_text;
+    private TextView anger_text;
+    private TextView fear_text;
+    private TextView surprise_text;
+    private TextView sadness_text;
     /* initialize a data transfer manager */
 
     @Override
@@ -36,15 +43,21 @@ public class MainActivity extends AppCompatActivity{
         init();
     }
 
+    public void check_history(){
+        Intent history = new Intent(MainActivity.this, history.class);
+        // pass the joy value designated to the button to the emotion entry activity via its key "emotion"
+        // start the activity
+        startActivity(history);
+    }
 
     public void init(){
 
-        TextView joy_text = findViewById(R.id.joy_count);
-        TextView love_text = findViewById(R.id.love_count);
-        TextView anger_text = findViewById(R.id.anger_count);
-        TextView fear_text = findViewById(R.id.fear_count);
-        TextView surprise_text = findViewById(R.id.surprise_count);
-        TextView sadness_text = findViewById(R.id.sadness_count);
+        joy_text = findViewById(R.id.joy_count);
+        love_text = findViewById(R.id.love_count);
+        anger_text = findViewById(R.id.anger_count);
+        fear_text = findViewById(R.id.fear_count);
+        surprise_text = findViewById(R.id.surprise_count);
+        sadness_text = findViewById(R.id.sadness_count);
 
         joy_text.setText(String.format("%s",counter.get(0)));
         love_text.setText(String.format("%s",counter.get(1)));
@@ -55,44 +68,6 @@ public class MainActivity extends AppCompatActivity{
 
     }
 
-    @Override
-    protected void onActivityResult(int requestCode,int resultCode,Intent data){
-        if(requestCode == 1){
-            if(resultCode == RESULT_OK){
-                update_count("joy");
-            }
-        }
-
-        if(requestCode == 2){
-            if(resultCode == RESULT_OK){
-                update_count("love");
-            }
-        }
-
-        if(requestCode == 3){
-            if(resultCode == RESULT_OK){
-                update_count("fear");
-            }
-        }
-
-        if(requestCode == 4){
-            if(resultCode == RESULT_OK){
-                update_count("anger");
-            }
-        }
-
-        if(requestCode == 5){
-            if(resultCode == RESULT_OK){
-                update_count("sadness");
-            }
-        }
-
-        if(requestCode == 6){
-            if(resultCode == RESULT_OK){
-                update_count("surprise");
-            }
-        }
-    }
     public void record_feels(View view){
         switch (view.getId()) {
             // in the case of the joy button being clicked
@@ -104,7 +79,8 @@ public class MainActivity extends AppCompatActivity{
                 // pass the joy value designated to the button to the emotion entry activity via its key "emotion"
                 joy_intent.putExtra("emotion","joy");
                 // start the activity
-                startActivityForResult(joy_intent,1);
+                startActivity(joy_intent);
+                update_count("joy");
                 // break from the case so the sequence does not continue onto other cases
                 break;
 
@@ -112,7 +88,8 @@ public class MainActivity extends AppCompatActivity{
             case R.id.sadness:
                 Intent sadness_intent = new Intent(MainActivity.this, joyEmotion.class);
                 sadness_intent.putExtra("emotion","sadness");
-                startActivityForResult(sadness_intent,5);
+                startActivity(sadness_intent);
+                update_count("sadness");
                 break;
 
             case R.id.love:
@@ -121,7 +98,8 @@ public class MainActivity extends AppCompatActivity{
                 // pass the joy value designated to the button to the emotion entry activity via its key "emotion"
                 love_intent.putExtra("emotion","love");
                 // start the activity
-                startActivityForResult(love_intent,2);
+                startActivity(love_intent);
+                update_count("love");
                 // break from the case so the sequence does not continue onto other cases
                 break;
 
@@ -131,7 +109,8 @@ public class MainActivity extends AppCompatActivity{
                 // pass the joy value designated to the button to the emotion entry activity via its key "emotion"
                 anger_intent.putExtra("emotion","anger");
                 // start the activity
-                startActivityForResult(anger_intent,4);
+                startActivity(anger_intent);
+                update_count("anger");
                 // break from the case so the sequence does not continue onto other cases
                 break;
 
@@ -141,7 +120,8 @@ public class MainActivity extends AppCompatActivity{
                 // pass the joy value designated to the button to the emotion entry activity via its key "emotion"
                 surprise_intent.putExtra("emotion","surprise");
                 // start the activity
-                startActivityForResult(surprise_intent,6);
+                startActivity(surprise_intent);
+                update_count("surprise");
                 // break from the case so the sequence does not continue onto other cases
                 break;
 
@@ -151,7 +131,8 @@ public class MainActivity extends AppCompatActivity{
                 // pass the joy value designated to the button to the emotion entry activity via its key "emotion"
                 fear_intent.putExtra("emotion","fear");
                 // start the activity
-                startActivityForResult(fear_intent,3);
+                startActivity(fear_intent);
+                update_count("fear");
                 // break from the case so the sequence does not continue onto other cases
                 break;
 
@@ -161,13 +142,6 @@ public class MainActivity extends AppCompatActivity{
     }
 
     public void update_count(String feel){
-        TextView joy_text = findViewById(R.id.joy_count);
-        TextView love_text = findViewById(R.id.love_count);
-        TextView anger_text = findViewById(R.id.anger_count);
-        TextView fear_text = findViewById(R.id.fear_count);
-        TextView surprise_text = findViewById(R.id.surprise_count);
-        TextView sadness_text = findViewById(R.id.sadness_count);
-
 
         switch(feel){
             case "joy":
