@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -55,13 +56,19 @@ public class MainActivity extends AppCompatActivity{
         surprise_text = findViewById(R.id.surprise_count);
         sadness_text = findViewById(R.id.sadness_count);
 
+    }
+
+    @Override
+    protected void onStart() {
+        // TODO Auto-generated method stub
+        super.onStart();
+
         joy_text.setText(String.format("%s",counter.get(0)));
         love_text.setText(String.format("%s",counter.get(1)));
         anger_text.setText(String.format("%s",counter.get(2)));
         fear_text.setText(String.format("%s",counter.get(3)));
         surprise_text.setText(String.format("%s",counter.get(4)));
         sadness_text.setText(String.format("%s",counter.get(5)));
-
     }
 
     public void check_history(View view){
@@ -150,7 +157,6 @@ public class MainActivity extends AppCompatActivity{
                 break;
 
         }
-        saveInFile(counter);
 
     }
 

@@ -18,4 +18,6 @@
     <string name="cancel">Cancel</string>
     <string name="post">Post</string>
     <string name="homepage">HomePage</string>
+    <string name="save">Save</string>
+    <string name="delete">Delete</string>
 </resources>

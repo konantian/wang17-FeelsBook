@@ -19,7 +19,8 @@
         <activity android:name=".EmotionEntry" />
         <activity android:name=".loveEmotion" />
         <activity android:name=".joyEmotion" />
-        <activity android:name=".history"></activity>
+        <activity android:name=".history" />
+        <activity android:name=".edit"></activity>
     </application>
 
 </manifest>

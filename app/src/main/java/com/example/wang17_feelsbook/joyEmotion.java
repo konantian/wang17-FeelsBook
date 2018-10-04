@@ -39,8 +39,6 @@ public class joyEmotion extends AppCompatActivity {
         display_emoji(emotion);
 
 
-
-
     }
 
     public void display_emoji(String emotion){
