@@ -1,9 +1,11 @@
 package com.example.wang17_feelsbook;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -19,11 +21,16 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.lang.reflect.Type;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity{
 
     private static final String FILENAME = "file.sav";
+    private static final String FILENAME2 = "feels.sav";
     protected static ArrayList<Integer> counter = new ArrayList<>();
 
     private TextView joy_text;
@@ -41,18 +48,6 @@ public class MainActivity extends AppCompatActivity{
 
         /* load all records from disk */
         counter=loadFromFile();
-        init();
-    }
-
-    public void check_history(View view){
-        Intent history = new Intent(MainActivity.this, history.class);
-        // pass the joy value designated to the button to the emotion entry activity via its key "emotion"
-        // start the activity
-        startActivity(history);
-    }
-
-    public void init(){
-
         joy_text = findViewById(R.id.joy_count);
         love_text = findViewById(R.id.love_count);
         anger_text = findViewById(R.id.anger_count);
@@ -69,7 +64,18 @@ public class MainActivity extends AppCompatActivity{
 
     }
 
+    public void check_history(View view){
+        Intent history = new Intent(MainActivity.this, history.class);
+        // pass the joy value designated to the button to the emotion entry activity via its key "emotion"
+        // start the activity
+        startActivity(history);
+    }
+
     public void record_feels(View view){
+        Date date = new Date();
+        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'hh:mm:ss", Locale.CANADA);
+        String current_time=dateFormat.format(date);
+
         switch (view.getId()) {
             // in the case of the joy button being clicked
 
@@ -81,6 +87,7 @@ public class MainActivity extends AppCompatActivity{
                 joy_intent.putExtra("emotion","joy");
                 // start the activity
                 startActivity(joy_intent);
+                saveFeels("Joy  |  "+current_time+"  |  ");
                 update_count("joy");
                 // break from the case so the sequence does not continue onto other cases
                 break;
@@ -90,6 +97,7 @@ public class MainActivity extends AppCompatActivity{
                 Intent sadness_intent = new Intent(MainActivity.this, joyEmotion.class);
                 sadness_intent.putExtra("emotion","sadness");
                 startActivity(sadness_intent);
+                saveFeels("Sadness  |  "+current_time+"  |  ");
                 update_count("sadness");
                 break;
 
@@ -100,6 +108,7 @@ public class MainActivity extends AppCompatActivity{
                 love_intent.putExtra("emotion","love");
                 // start the activity
                 startActivity(love_intent);
+                saveFeels("Love  |  "+current_time+"  |  ");
                 update_count("love");
                 // break from the case so the sequence does not continue onto other cases
                 break;
@@ -111,6 +120,7 @@ public class MainActivity extends AppCompatActivity{
                 anger_intent.putExtra("emotion","anger");
                 // start the activity
                 startActivity(anger_intent);
+                saveFeels("Anger  |  "+current_time+"  |  ");
                 update_count("anger");
                 // break from the case so the sequence does not continue onto other cases
                 break;
@@ -122,6 +132,7 @@ public class MainActivity extends AppCompatActivity{
                 surprise_intent.putExtra("emotion","surprise");
                 // start the activity
                 startActivity(surprise_intent);
+                saveFeels("Surprise  |  "+current_time+"  |  ");
                 update_count("surprise");
                 // break from the case so the sequence does not continue onto other cases
                 break;
@@ -133,6 +144,7 @@ public class MainActivity extends AppCompatActivity{
                 fear_intent.putExtra("emotion","fear");
                 // start the activity
                 startActivity(fear_intent);
+                saveFeels("Fear  |  "+current_time+"  |  ");
                 update_count("fear");
                 // break from the case so the sequence does not continue onto other cases
                 break;
@@ -184,7 +196,7 @@ public class MainActivity extends AppCompatActivity{
 
                 break;
         }
-        //setResult(RESULT_OK);
+        setResult(RESULT_OK);
         saveInFile(counter);
         //finish();
 
@@ -229,6 +241,22 @@ public class MainActivity extends AppCompatActivity{
 
             /* ensure writer has flushed all buffers, then close */
             writer.flush();
+            fos.close();
+
+        } catch (FileNotFoundException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+    }
+
+    private void saveFeels(String text) {
+        try {
+            FileOutputStream fos = openFileOutput(FILENAME2,
+                    Context.MODE_APPEND);
+            fos.write(text.getBytes());
             fos.close();
         } catch (FileNotFoundException e) {
             // TODO Auto-generated catch block
