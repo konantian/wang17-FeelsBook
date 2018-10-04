@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.AppCompatImageView;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -34,17 +35,13 @@ public class joyEmotion extends AppCompatActivity {
 
         // set the Edittext and TextViews to the appropriate layout objects via the findViewId method
         EditText editText= findViewById(R.id.comment);
-        //TextView edate=findViewById(R.id.date);
-
-        // set the textView's character sequence to the value passed into the activity
-
-        // create a new datetime object with the specified assignment format and set the date objects text
         Date date = new Date();
         DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'hh:mm:ss", Locale.CANADA);
         String strdate=dateFormat.format(date);
         //edate.setText(strdate);
         // merge the emotion, date, and comment into a single entry which will later be user to compare changes
-        //initial_entry=tv.getText().toString()+" -- "+edate.getText().toString()+"\n"+editText.getText().toString();
+        //initial_entry=emotion+" -- "+strdate+editText.getText().toString();
+
 
     }
 
@@ -76,16 +73,17 @@ public class joyEmotion extends AppCompatActivity {
     }
     public void cancel(View view){
 
-        // launch an intent to return to the home screen
-        //Intent intent = new Intent(joyEmotion.this, MainActivity.class);
-        //startActivity(intent);
         finish();
     }
 
     public void post(View view){
-
         setResult(RESULT_OK);
-        finish();
+        TextView test=findViewById(R.id.test);
+        EditText editText= findViewById(R.id.comment);
+        initial_entry=editText.getText().toString();
+
+        test.setText(initial_entry);
+        //finish();
     }
 
 }

@@ -15,37 +15,39 @@
         android:layout_marginTop="16dp"
         android:ems="10"
         android:hint="@string/comment"
-        android:inputType="textMultiLine"
+        android:importantForAutofill="no"
+        android:inputType="textCapSentences|textMultiLine"
+        android:maxLength="100"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.579" />
+        app:layout_constraintVertical_bias="0.374" />
 
     <Button
         android:id="@+id/cancel"
         android:layout_width="105dp"
         android:layout_height="50dp"
         android:layout_marginBottom="16dp"
-        android:layout_marginTop="44dp"
-        android:text="@string/cancel"
-        android:onClick="cancel"
+        android:layout_marginTop="40dp"
         android:background="@drawable/button_view"
+        android:onClick="cancel"
+        android:text="@string/cancel"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/post"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/comment"
-        app:layout_constraintVertical_bias="0.061" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/post"
         android:layout_width="105dp"
         android:layout_height="48dp"
-        android:text="@string/post"
-        android:onClick="post"
         android:background="@drawable/button_view"
+        android:onClick="post"
+        android:text="@string/post"
         app:layout_constraintBaseline_toBaselineOf="@+id/cancel"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -60,4 +62,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/joy" />
+
+    <TextView
+        android:id="@+id/test"
+        android:layout_width="284dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/post"
+        app:layout_constraintVertical_bias="0.481" />
 </android.support.constraint.ConstraintLayout>

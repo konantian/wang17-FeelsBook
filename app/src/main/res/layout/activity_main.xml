@@ -100,20 +100,19 @@
 
     <Button
         android:id="@+id/history"
-        android:layout_width="230dp"
+        android:layout_width="338dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/mybutton"
+        android:onClick="check_history"
         android:text="@string/history"
         android:textSize="25sp"
-        android:onClick="history"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.624"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toBottomOf="@+id/sadness" />
 
     <TextView
         android:id="@+id/love_count"

@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -43,7 +44,7 @@ public class MainActivity extends AppCompatActivity{
         init();
     }
 
-    public void check_history(){
+    public void check_history(View view){
         Intent history = new Intent(MainActivity.this, history.class);
         // pass the joy value designated to the button to the emotion entry activity via its key "emotion"
         // start the activity
