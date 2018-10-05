@@ -10,9 +10,8 @@ The main goal for this project is:
   - delete a past emotion
   
   Detailed Descriptions:
-  
-    - User just need to pick a emotion and the record that include face and date has been finished
-    - In the main screen, user can check for each face how many records are in history records
-    - User can check the history records by click the "history" button 
-    - In history screen, user can view their past records and edit them.For example, add or delete part of the comments as well as the date
-    - User can delete past records directly.
+  + User just need to pick a emotion and the record that include face and date has been finished
+  + In the main screen, user can check for each face how many records are in history records
+  + User can check the history records by click the "history" button 
+  + In history screen, user can view their past records and edit them.For example, add or delete part of the comments as well as the date
+  + User can delete past records directly.
