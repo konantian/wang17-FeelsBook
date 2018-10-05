@@ -1,6 +1,6 @@
 # wang17-FeelsBook
 
-## This is the assginment 1 of Ualberta's CMPUT 301
+## This is the assginment 1 of Ualberta's CMPUT 301, the demo video can be found at this link https://youtu.be/xwrAyXCDJHs
 
 ### The main goal for this project is:
   - Quickly record an emotion with only 1 click on the app and add an optional comment
