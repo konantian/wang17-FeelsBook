@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/postview"
+    android:background="@drawable/editview"
     tools:context=".edit">
 
     <EditText
@@ -15,6 +15,8 @@
         android:ems="10"
         android:maxLength="100"
         android:inputType="textMultiLine"
+        android:textColor="#000000"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
@@ -28,12 +30,12 @@
         android:layout_marginEnd="16dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
+        android:background="@drawable/editbutton"
         android:onClick="save"
         android:text="@string/save"
-        android:background="@drawable/button_view"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/delete"
-        app:layout_constraintHorizontal_bias="0.768"
+        app:layout_constraintHorizontal_bias="0.557"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/content"
         app:layout_constraintVertical_bias="1.0" />
@@ -43,10 +45,10 @@
         android:layout_width="120dp"
         android:layout_height="60dp"
         android:layout_marginBottom="332dp"
-        android:layout_marginEnd="44dp"
+        android:layout_marginEnd="60dp"
+        android:background="@drawable/editbutton"
         android:onClick="delete"
         android:text="@string/delete"
-        android:background="@drawable/button_view"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 </android.support.constraint.ConstraintLayout>
