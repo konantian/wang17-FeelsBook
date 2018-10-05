@@ -65,7 +65,7 @@ public class history extends AppCompatActivity {
         //https://github.com/joshua2ua/lonelyTwitter
 
         final String[] feels = loadFromFile();
-        final ArrayAdapter<String> ea = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, feels);
+        final ArrayAdapter<String> ea = new ArrayAdapter<>(this, R.layout.list_item, feels);
 
         // set the adaptor to the listView to list the stored emotions
         history_list.setAdapter(ea);
