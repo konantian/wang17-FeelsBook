@@ -1,3 +1,22 @@
+/*MIT License
+        Copyright (c) 2018 Yuan Wang
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.*/
+
+
 /*
 
 https://stackoverflow.com/questions/42957906/cannot-resolve-symbol-onitemclicklistener
@@ -7,7 +26,6 @@ https://stackoverflow.com/questions/920306/sending-data-back-to-the-main-activit
 
 package com.example.wang17_feelsbook;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -15,8 +33,6 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -24,14 +40,13 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class history extends AppCompatActivity {
 
 
-    private static final String FILENAME = "feels.sav";
+    //set some variables
+    private static final String FILENAME = "history.sav";
     private ListView history_list;
-    public String new_message;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,10 +61,17 @@ public class history extends AppCompatActivity {
         super.onStart();
         history_list = findViewById(R.id.emotion_list);
 
+        //set a string array to store all the history data,code from
+        //https://github.com/joshua2ua/lonelyTwitter
+
         final String[] feels = loadFromFile();
         final ArrayAdapter<String> ea = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, feels);
+
         // set the adaptor to the listView to list the stored emotions
         history_list.setAdapter(ea);
+
+        //if user click an item in listview, jump to another activity,code from
+        //https://stackoverflow.com/questions/20689357/how-can-i-go-to-an-other-activity-when-i-click-item-of-list-view
 
         history_list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -64,30 +86,15 @@ public class history extends AppCompatActivity {
 
     }
 
-    /*
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
 
-        // check that it is the SecondActivity with an OK result
-        if (requestCode == 1) {
-            if (resultCode == RESULT_OK) {
-
-                // get String data from Intent
-                new_message = data.getStringExtra("back_message");
-
-            }
-        }
-    }
-    */
-
-
+    //back to the main page
     public void home(View view){
 
-        // launch an intent to return to the home screen
         finish();
     }
 
+    //load the history data from local file, this code from
+    //https://github.com/joshua2ua/lonelyTwitter
     private String[] loadFromFile() {
         ArrayList<String> tweets = new ArrayList<String>();
         try {

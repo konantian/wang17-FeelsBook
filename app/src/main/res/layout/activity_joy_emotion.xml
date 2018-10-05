@@ -10,7 +10,7 @@
     <EditText
         android:id="@+id/comment"
         android:layout_width="292dp"
-        android:layout_height="80dp"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
         android:layout_marginTop="16dp"
         android:ems="10"
@@ -23,7 +23,7 @@
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.374" />
+        app:layout_constraintVertical_bias="0.518" />
 
     <Button
         android:id="@+id/cancel"

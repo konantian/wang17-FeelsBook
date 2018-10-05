@@ -1,3 +1,25 @@
+/*MIT License
+        Copyright (c) 2018 Yuan Wang
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.*/
+
+/*
+https://github.com/tylerwatson98/tpwatson-FeelsBook/blob/master/app/src/main/java/com/example/tpwatson_feelsbook/EmotionEntry.java
+ */
+
 package com.example.wang17_feelsbook;
 
 import android.content.Context;
@@ -5,10 +27,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -30,8 +49,9 @@ import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity{
 
-    private static final String FILENAME = "file.sav";
-    private static final String FILENAME2 = "feels.sav";
+    //Initialize some variables at the beginning
+    private static final String FILENAME = "count.sav";
+    private static final String FILENAME2 = "history.sav";
     protected static ArrayList<Integer> counter = new ArrayList<>();
 
     private TextView joy_text;
@@ -40,8 +60,9 @@ public class MainActivity extends AppCompatActivity{
     private TextView fear_text;
     private TextView surprise_text;
     private TextView sadness_text;
-    /* initialize a data transfer manager */
 
+
+    //Load all the data that need to display on the screen
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,12 +77,27 @@ public class MainActivity extends AppCompatActivity{
         surprise_text = findViewById(R.id.surprise_count);
         sadness_text = findViewById(R.id.sadness_count);
 
+        joy_text.setText(String.format("%s",counter.get(0)));
+        love_text.setText(String.format("%s",counter.get(1)));
+        anger_text.setText(String.format("%s",counter.get(2)));
+        fear_text.setText(String.format("%s",counter.get(3)));
+        surprise_text.setText(String.format("%s",counter.get(4)));
+        sadness_text.setText(String.format("%s",counter.get(5)));
+
     }
 
+    //Each time back to the main activity,update the data from the file
     @Override
-    protected void onStart() {
-        // TODO Auto-generated method stub
-        super.onStart();
+    public void onResume(){
+
+        super.onResume();
+        counter=loadFromFile();
+        joy_text = findViewById(R.id.joy_count);
+        love_text = findViewById(R.id.love_count);
+        anger_text = findViewById(R.id.anger_count);
+        fear_text = findViewById(R.id.fear_count);
+        surprise_text = findViewById(R.id.surprise_count);
+        sadness_text = findViewById(R.id.sadness_count);
 
         joy_text.setText(String.format("%s",counter.get(0)));
         love_text.setText(String.format("%s",counter.get(1)));
@@ -69,107 +105,134 @@ public class MainActivity extends AppCompatActivity{
         fear_text.setText(String.format("%s",counter.get(3)));
         surprise_text.setText(String.format("%s",counter.get(4)));
         sadness_text.setText(String.format("%s",counter.get(5)));
+
     }
 
+    //click this button will lead to the activity to list all the past posts
     public void check_history(View view){
         Intent history = new Intent(MainActivity.this, history.class);
-        // pass the joy value designated to the button to the emotion entry activity via its key "emotion"
-        // start the activity
         startActivity(history);
     }
 
+    //click the emotion buttons will record the emotion and date first
     public void record_feels(View view){
+
+        //create the date string
         Date date = new Date();
         DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'hh:mm:ss", Locale.CANADA);
         String current_time=dateFormat.format(date);
 
+        //check which button was clicked
         switch (view.getId()) {
-            // in the case of the joy button being clicked
 
+            //joy button clicked
             case R.id.joy:
 
-                // the clicking of this button creates a new intent which takes the user to the emotion entry activity
+                //jump to a new activity to ask user if they want comment
                 Intent joy_intent = new Intent(MainActivity.this, joyEmotion.class);
-                // pass the joy value designated to the button to the emotion entry activity via its key "emotion"
                 joy_intent.putExtra("emotion","joy");
-                // start the activity
                 startActivity(joy_intent);
-                saveFeels("Joy  |  "+current_time+"  |  ");
+
+                //record the emotion and the date
+                saveFeels("Joy  "+current_time+"  |  ");
+
+                //update the count for each emotion
                 update_count("joy");
-                // break from the case so the sequence does not continue onto other cases
+
                 break;
 
-            // each case will perform almost identical methods but will differ in their count IDs & values and the exported message
+            //sadness button clicked
             case R.id.sadness:
+
+                //jump to a new activity to ask user if they want comment
                 Intent sadness_intent = new Intent(MainActivity.this, joyEmotion.class);
                 sadness_intent.putExtra("emotion","sadness");
                 startActivity(sadness_intent);
-                saveFeels("Sadness  |  "+current_time+"  |  ");
+
+                //record the emotion and the date
+                saveFeels("Sadness   "+current_time+"  |  ");
+                //update the count for each emotion
                 update_count("sadness");
                 break;
 
+            //love button clicked
             case R.id.love:
-                // the clicking of this button creates a new intent which takes the user to the emotion entry activity
+
+                //jump to a new activity to ask user if they want comment
                 Intent love_intent = new Intent(MainActivity.this, joyEmotion.class);
-                // pass the joy value designated to the button to the emotion entry activity via its key "emotion"
                 love_intent.putExtra("emotion","love");
-                // start the activity
                 startActivity(love_intent);
-                saveFeels("Love  |  "+current_time+"  |  ");
+
+                //record the emotion and the date
+                saveFeels("Love   "+current_time+"  |  ");
+                //update the count for each emotion
                 update_count("love");
-                // break from the case so the sequence does not continue onto other cases
+
                 break;
 
+            //anger button clicked
             case R.id.anger:
-                // the clicking of this button creates a new intent which takes the user to the emotion entry activity
+
+                //jump to a new activity to ask user if they want comment
                 Intent anger_intent = new Intent(MainActivity.this, joyEmotion.class);
-                // pass the joy value designated to the button to the emotion entry activity via its key "emotion"
                 anger_intent.putExtra("emotion","anger");
-                // start the activity
                 startActivity(anger_intent);
-                saveFeels("Anger  |  "+current_time+"  |  ");
+
+                //record the emotion and the date
+                saveFeels("Anger   "+current_time+"  |  ");
+                //update the count for each emotion
                 update_count("anger");
-                // break from the case so the sequence does not continue onto other cases
+
                 break;
 
+            //surprise button clicked
             case R.id.surprise:
-                // the clicking of this button creates a new intent which takes the user to the emotion entry activity
+
+                //jump to a new activity to ask user if they want comment
                 Intent surprise_intent = new Intent(MainActivity.this, joyEmotion.class);
-                // pass the joy value designated to the button to the emotion entry activity via its key "emotion"
                 surprise_intent.putExtra("emotion","surprise");
-                // start the activity
                 startActivity(surprise_intent);
-                saveFeels("Surprise  |  "+current_time+"  |  ");
+
+                //record the emotion and the date
+                saveFeels("Surprise   "+current_time+"  |  ");
+                //update the count for each emotion
                 update_count("surprise");
-                // break from the case so the sequence does not continue onto other cases
+
                 break;
 
             case R.id.fear:
-                // the clicking of this button creates a new intent which takes the user to the emotion entry activity
+
+                //jump to a new activity to ask user if they want comment
                 Intent fear_intent = new Intent(MainActivity.this, joyEmotion.class);
-                // pass the joy value designated to the button to the emotion entry activity via its key "emotion"
                 fear_intent.putExtra("emotion","fear");
-                // start the activity
                 startActivity(fear_intent);
-                saveFeels("Fear  |  "+current_time+"  |  ");
+
+                //record the emotion and the date
+                saveFeels("Fear   "+current_time+"  |  ");
+                //update the count for each emotion
                 update_count("fear");
-                // break from the case so the sequence does not continue onto other cases
+
                 break;
 
         }
 
     }
 
+    //given an emotion name and update the count for each emotion
     public void update_count(String feel){
 
         switch(feel){
             case "joy":
+
+                //get the current count and update it by +1 and set it to display
                 counter.set(0,counter.get(0)+1);
                 joy_text.setText(String.format("%s",counter.get(0)));
 
                 break;
 
             case "love":
+
+                //get the current count and update it by +1 and set it to display
                 counter.set(1,counter.get(1)+1);
 
                 love_text.setText(String.format("%s",counter.get(1)));
@@ -177,12 +240,16 @@ public class MainActivity extends AppCompatActivity{
                 break;
 
             case "anger":
+
+                //get the current count and update it by +1 and set it to display
                 counter.set(2,counter.get(2)+1);
 
                 anger_text.setText(String.format("%s",counter.get(2)));
                 break;
 
             case "fear":
+
+                //get the current count and update it by +1 and set it to display
                 counter.set(3,counter.get(3)+1);
 
                 fear_text.setText(String.format("%s",counter.get(3)));
@@ -190,6 +257,8 @@ public class MainActivity extends AppCompatActivity{
                 break;
 
             case "surprise":
+
+                //get the current count and update it by +1 and set it to display
                 counter.set(4,counter.get(4)+1);
 
                 surprise_text.setText(String.format("%s",counter.get(4)));
@@ -197,16 +266,22 @@ public class MainActivity extends AppCompatActivity{
                 break;
 
             case "sadness":
+
+                //get the current count and update it by +1 and set it to display
                 counter.set(5,counter.get(5)+1);
                 sadness_text.setText(String.format("%s",counter.get(5)));
 
                 break;
         }
-        setResult(RESULT_OK);
+
+        //save the count data to the file
+        //setResult(RESULT_OK);
         saveInFile(counter);
-        //finish();
 
     }
+
+    //load the count data from local file, this code from
+    //https://github.com/joshua2ua/lonelyTwitter
 
     private ArrayList<Integer> loadFromFile() {
 
@@ -234,6 +309,8 @@ public class MainActivity extends AppCompatActivity{
         return counter;
     }
 
+    //save the count data to local file, code from
+    //https://github.com/joshua2ua/lonelyTwitter
     private void saveInFile(ArrayList<Integer> array) {
         try {
             /* create buffered stream writer */
@@ -258,6 +335,8 @@ public class MainActivity extends AppCompatActivity{
         }
     }
 
+    //save the emotion and date data to local file, code from
+    //https://github.com/joshua2ua/lonelyTwitter
     private void saveFeels(String text) {
         try {
             FileOutputStream fos = openFileOutput(FILENAME2,

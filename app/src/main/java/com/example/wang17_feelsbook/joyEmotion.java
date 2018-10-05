@@ -1,48 +1,57 @@
+/*MIT License
+        Copyright (c) 2018 Yuan Wang
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.*/
+
 package com.example.wang17_feelsbook;
 
-import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.AppCompatImageView;
-import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.TextView;
-
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.Locale;
+
 
 public class joyEmotion extends AppCompatActivity {
 
 
-    // create an initial entry string for comparison purposes when user tries to cancel entry
+    //set some variables and the filename
     private String initial_entry;
-    private static final String FILENAME = "feels.sav";
+    private static final String FILENAME = "history.sav";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_joy_emotion);
 
-        // get emotion passed from the MainActivity
+        //get the message from the main page to know which emotion user clicked
         Intent intent= getIntent();
         String emotion=intent.getStringExtra("emotion");
         display_emoji(emotion);
 
-
     }
 
+    //based on the clicked emotion to display the emoji picture
     public void display_emoji(String emotion){
-        ImageView image= (ImageView) findViewById(R.id.emoji);
+        ImageView image= findViewById(R.id.emoji);
         if(emotion.equals("joy")){
             image.setImageResource(R.drawable.joy);
         }
@@ -67,6 +76,8 @@ public class joyEmotion extends AppCompatActivity {
             image.setImageResource(R.drawable.sadness);
         }
     }
+
+    //cancel button to back to the main page and save ang changes to local file
     public void cancel(View view){
 
         initial_entry="\n";
@@ -74,18 +85,21 @@ public class joyEmotion extends AppCompatActivity {
         finish();
     }
 
+
+    //post button to add user's comment to the history data
     public void post(View view){
 
-        setResult(RESULT_OK);
-        // set the Edittext and TextViews to the appropriate layout objects via the findViewId method
-        EditText editText= findViewById(R.id.comment);
+        //setResult(RESULT_OK);
+        //locate the edittext area and get the user's input
 
-        // merge the emotion, date, and comment into a single entry which will later be user to compare changes
+        EditText editText= findViewById(R.id.comment);
         initial_entry=editText.getText().toString()+"\n";
         saveFeels(initial_entry);
         finish();
     }
 
+    //save the comment to local file, code from
+    //https://github.com/joshua2ua/lonelyTwitter
     private void saveFeels(String text) {
         try {
             FileOutputStream fos = openFileOutput(FILENAME,

@@ -7,7 +7,7 @@
     <string name="sadness">Sadness</string>
     <string name="fear">Fear</string>
     <string name="question">What\'s up dude?</string>
-    <string name="history">History Of My Emotions</string>
+    <string name="history">History</string>
     <string name="joy_count">0</string>
     <string name="love_count">0</string>
     <string name="sadness_count">0</string>
@@ -20,4 +20,5 @@
     <string name="homepage">HomePage</string>
     <string name="save">Save</string>
     <string name="delete">Delete</string>
+    <string name="count">Count</string>
 </resources>
