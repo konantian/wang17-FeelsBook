@@ -1,0 +1,174 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/konantian/wang17FeelsBook/app/src/main/AndroidManifest.xml:2:1-26:12
+INJECTED from /Users/konantian/wang17FeelsBook/app/src/main/AndroidManifest.xml:2:1-26:12
+INJECTED from /Users/konantian/wang17FeelsBook/app/src/main/AndroidManifest.xml:2:1-26:12
+INJECTED from /Users/konantian/wang17FeelsBook/app/src/main/AndroidManifest.xml:2:1-26:12
+MERGED from [com.android.support:appcompat-v7:28.0.0] /Users/konantian/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/c457db792e176bc2ce1e2d014acdfb73/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/konantian/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/b21085d02e597c01f1c712b8f009a816/AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:support-fragment:28.0.0] /Users/konantian/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/d44a3e2bf811918a5dd0a64bfb24f400/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /Users/konantian/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-28.0.0.aar/09520628fd46ee26465704520c3bc46d/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:28.0.0] /Users/konantian/.gradle/caches/transforms-1/files-1.1/support-core-ui-28.0.0.aar/5741b6ce7918d5335437c0b39e5c3bc5/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:28.0.0] /Users/konantian/.gradle/caches/transforms-1/files-1.1/support-core-utils-28.0.0.aar/3a103ac76fb7f982b59db4083a71cd64/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /Users/konantian/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-28.0.0.aar/7b962eeff44fed94b3bc2e59db39661c/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:loader:28.0.0] /Users/konantian/.gradle/caches/transforms-1/files-1.1/loader-28.0.0.aar/0b749a8c3aadc932d977e093880982d0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:viewpager:28.0.0] /Users/konantian/.gradle/caches/transforms-1/files-1.1/viewpager-28.0.0.aar/e84a9f23fc9d2eb91b330a0913e9b727/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /Users/konantian/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-28.0.0.aar/e228fb1cbdc93dc2db2e7eccf8d68308/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:drawerlayout:28.0.0] /Users/konantian/.gradle/caches/transforms-1/files-1.1/drawerlayout-28.0.0.aar/f5597dfb2814babd443f26ef5f7be258/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /Users/konantian/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-28.0.0.aar/da6ebbba9c4f0ef7e7b22ce7e0dccd69/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:customview:28.0.0] /Users/konantian/.gradle/caches/transforms-1/files-1.1/customview-28.0.0.aar/c459c3447f90622d272e0a068512e682/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /Users/konantian/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-28.0.0.aar/90a096fcf62aedc6d9bea1cde9fd1b7d/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /Users/konantian/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-28.0.0.aar/f489775e4cc4eaf5c67acd40763d1098/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:28.0.0] /Users/konantian/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/463ccd30df64bdf61b4c391ec4ed80ff/AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/konantian/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/290b996dd76c6658eb2788b8c1f0821e/AndroidManifest.xml:17:1-25:12
+MERGED from [com.android.support:cursoradapter:28.0.0] /Users/konantian/.gradle/caches/transforms-1/files-1.1/cursoradapter-28.0.0.aar/384ad3fbff34f6bdb1312a98b01b42ba/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /Users/konantian/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/47386cb267288e1943a912484f660b33/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:documentfile:28.0.0] /Users/konantian/.gradle/caches/transforms-1/files-1.1/documentfile-28.0.0.aar/39b6880b62c1d5c204824d329b9900b6/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /Users/konantian/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-28.0.0.aar/8d5df7e107562a1c532521bf36c62ff3/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:print:28.0.0] /Users/konantian/.gradle/caches/transforms-1/files-1.1/print-28.0.0.aar/ce13f552f4017cbf923ebdef0b5aba4f/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /Users/konantian/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.1.aar/22a1cb3d4191bc8a33b8d3380c84e690/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /Users/konantian/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/3340bebd2d2770d3d31032c1e1b598d8/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /Users/konantian/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/b9a5a8789500910f6fa21132aae7a2c2/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.1] /Users/konantian/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/b7d30cd61da2fe864f1ff6a8f9cdeb84/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:interpolator:28.0.0] /Users/konantian/.gradle/caches/transforms-1/files-1.1/interpolator-28.0.0.aar/8933432e82d59daa078e9807dea013b7/AndroidManifest.xml:17:1-22:12
+INJECTED from /Users/konantian/wang17FeelsBook/app/src/main/AndroidManifest.xml:2:1-26:12
+INJECTED from /Users/konantian/wang17FeelsBook/app/src/main/AndroidManifest.xml:2:1-26:12
+INJECTED from /Users/konantian/wang17FeelsBook/app/src/main/AndroidManifest.xml:2:1-26:12
+	package
+		ADDED from /Users/konantian/wang17FeelsBook/app/src/main/AndroidManifest.xml:3:5-43
+		INJECTED from /Users/konantian/wang17FeelsBook/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/konantian/wang17FeelsBook/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/konantian/wang17FeelsBook/app/src/main/AndroidManifest.xml
+		ADDED from /Users/konantian/wang17FeelsBook/app/src/main/AndroidManifest.xml:2:1-26:12
+		INJECTED from /Users/konantian/wang17FeelsBook/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /Users/konantian/wang17FeelsBook/app/src/main/AndroidManifest.xml
+		ADDED from /Users/konantian/wang17FeelsBook/app/src/main/AndroidManifest.xml:2:1-26:12
+		INJECTED from /Users/konantian/wang17FeelsBook/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/konantian/wang17FeelsBook/app/src/main/AndroidManifest.xml:2:11-69
+application
+ADDED from /Users/konantian/wang17FeelsBook/app/src/main/AndroidManifest.xml:5:5-24:19
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/konantian/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/b21085d02e597c01f1c712b8f009a816/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/konantian/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/b21085d02e597c01f1c712b8f009a816/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:support-compat:28.0.0] /Users/konantian/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/463ccd30df64bdf61b4c391ec4ed80ff/AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:support-compat:28.0.0] /Users/konantian/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/463ccd30df64bdf61b4c391ec4ed80ff/AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/konantian/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/290b996dd76c6658eb2788b8c1f0821e/AndroidManifest.xml:22:5-23:19
+MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/konantian/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/290b996dd76c6658eb2788b8c1f0821e/AndroidManifest.xml:22:5-23:19
+	android:appComponentFactory
+		ADDED from [com.android.support:support-compat:28.0.0] /Users/konantian/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/463ccd30df64bdf61b4c391ec4ed80ff/AndroidManifest.xml:22:18-91
+	android:supportsRtl
+		ADDED from /Users/konantian/wang17FeelsBook/app/src/main/AndroidManifest.xml:10:9-35
+	android:label
+		ADDED from /Users/konantian/wang17FeelsBook/app/src/main/AndroidManifest.xml:8:9-41
+	android:roundIcon
+		ADDED from /Users/konantian/wang17FeelsBook/app/src/main/AndroidManifest.xml:9:9-54
+	android:icon
+		ADDED from /Users/konantian/wang17FeelsBook/app/src/main/AndroidManifest.xml:7:9-43
+	android:allowBackup
+		ADDED from /Users/konantian/wang17FeelsBook/app/src/main/AndroidManifest.xml:6:9-35
+	android:theme
+		ADDED from /Users/konantian/wang17FeelsBook/app/src/main/AndroidManifest.xml:11:9-40
+activity#com.example.wang17_feelsbook.MainActivity
+ADDED from /Users/konantian/wang17FeelsBook/app/src/main/AndroidManifest.xml:12:9-18:20
+	android:name
+		ADDED from /Users/konantian/wang17FeelsBook/app/src/main/AndroidManifest.xml:12:19-47
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /Users/konantian/wang17FeelsBook/app/src/main/AndroidManifest.xml:13:13-17:29
+action#android.intent.action.MAIN
+ADDED from /Users/konantian/wang17FeelsBook/app/src/main/AndroidManifest.xml:14:17-69
+	android:name
+		ADDED from /Users/konantian/wang17FeelsBook/app/src/main/AndroidManifest.xml:14:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/konantian/wang17FeelsBook/app/src/main/AndroidManifest.xml:16:17-77
+	android:name
+		ADDED from /Users/konantian/wang17FeelsBook/app/src/main/AndroidManifest.xml:16:27-74
+activity#com.example.wang17_feelsbook.EmotionEntry
+ADDED from /Users/konantian/wang17FeelsBook/app/src/main/AndroidManifest.xml:19:9-50
+	android:name
+		ADDED from /Users/konantian/wang17FeelsBook/app/src/main/AndroidManifest.xml:19:19-47
+activity#com.example.wang17_feelsbook.joyEmotion
+ADDED from /Users/konantian/wang17FeelsBook/app/src/main/AndroidManifest.xml:20:9-48
+	android:name
+		ADDED from /Users/konantian/wang17FeelsBook/app/src/main/AndroidManifest.xml:20:19-45
+activity#com.example.wang17_feelsbook.history
+ADDED from /Users/konantian/wang17FeelsBook/app/src/main/AndroidManifest.xml:21:9-45
+	android:name
+		ADDED from /Users/konantian/wang17FeelsBook/app/src/main/AndroidManifest.xml:21:19-42
+activity#com.example.wang17_feelsbook.edit
+ADDED from /Users/konantian/wang17FeelsBook/app/src/main/AndroidManifest.xml:22:9-42
+	android:name
+		ADDED from /Users/konantian/wang17FeelsBook/app/src/main/AndroidManifest.xml:22:19-39
+activity#com.example.wang17_feelsbook.recordEmotion
+ADDED from /Users/konantian/wang17FeelsBook/app/src/main/AndroidManifest.xml:23:9-60
+	android:name
+		ADDED from /Users/konantian/wang17FeelsBook/app/src/main/AndroidManifest.xml:23:19-48
+uses-sdk
+INJECTED from /Users/konantian/wang17FeelsBook/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/konantian/wang17FeelsBook/app/src/main/AndroidManifest.xml
+INJECTED from /Users/konantian/wang17FeelsBook/app/src/main/AndroidManifest.xml
+MERGED from [com.android.support:appcompat-v7:28.0.0] /Users/konantian/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/c457db792e176bc2ce1e2d014acdfb73/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0] /Users/konantian/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0.aar/c457db792e176bc2ce1e2d014acdfb73/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/konantian/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/b21085d02e597c01f1c712b8f009a816/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /Users/konantian/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.3.aar/b21085d02e597c01f1c712b8f009a816/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:support-fragment:28.0.0] /Users/konantian/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/d44a3e2bf811918a5dd0a64bfb24f400/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] /Users/konantian/.gradle/caches/transforms-1/files-1.1/support-fragment-28.0.0.aar/d44a3e2bf811918a5dd0a64bfb24f400/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /Users/konantian/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-28.0.0.aar/09520628fd46ee26465704520c3bc46d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /Users/konantian/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-28.0.0.aar/09520628fd46ee26465704520c3bc46d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] /Users/konantian/.gradle/caches/transforms-1/files-1.1/support-core-ui-28.0.0.aar/5741b6ce7918d5335437c0b39e5c3bc5/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] /Users/konantian/.gradle/caches/transforms-1/files-1.1/support-core-ui-28.0.0.aar/5741b6ce7918d5335437c0b39e5c3bc5/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] /Users/konantian/.gradle/caches/transforms-1/files-1.1/support-core-utils-28.0.0.aar/3a103ac76fb7f982b59db4083a71cd64/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] /Users/konantian/.gradle/caches/transforms-1/files-1.1/support-core-utils-28.0.0.aar/3a103ac76fb7f982b59db4083a71cd64/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /Users/konantian/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-28.0.0.aar/7b962eeff44fed94b3bc2e59db39661c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /Users/konantian/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-28.0.0.aar/7b962eeff44fed94b3bc2e59db39661c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] /Users/konantian/.gradle/caches/transforms-1/files-1.1/loader-28.0.0.aar/0b749a8c3aadc932d977e093880982d0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] /Users/konantian/.gradle/caches/transforms-1/files-1.1/loader-28.0.0.aar/0b749a8c3aadc932d977e093880982d0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] /Users/konantian/.gradle/caches/transforms-1/files-1.1/viewpager-28.0.0.aar/e84a9f23fc9d2eb91b330a0913e9b727/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] /Users/konantian/.gradle/caches/transforms-1/files-1.1/viewpager-28.0.0.aar/e84a9f23fc9d2eb91b330a0913e9b727/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /Users/konantian/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-28.0.0.aar/e228fb1cbdc93dc2db2e7eccf8d68308/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /Users/konantian/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-28.0.0.aar/e228fb1cbdc93dc2db2e7eccf8d68308/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] /Users/konantian/.gradle/caches/transforms-1/files-1.1/drawerlayout-28.0.0.aar/f5597dfb2814babd443f26ef5f7be258/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] /Users/konantian/.gradle/caches/transforms-1/files-1.1/drawerlayout-28.0.0.aar/f5597dfb2814babd443f26ef5f7be258/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /Users/konantian/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-28.0.0.aar/da6ebbba9c4f0ef7e7b22ce7e0dccd69/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /Users/konantian/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-28.0.0.aar/da6ebbba9c4f0ef7e7b22ce7e0dccd69/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] /Users/konantian/.gradle/caches/transforms-1/files-1.1/customview-28.0.0.aar/c459c3447f90622d272e0a068512e682/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] /Users/konantian/.gradle/caches/transforms-1/files-1.1/customview-28.0.0.aar/c459c3447f90622d272e0a068512e682/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /Users/konantian/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-28.0.0.aar/90a096fcf62aedc6d9bea1cde9fd1b7d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /Users/konantian/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-28.0.0.aar/90a096fcf62aedc6d9bea1cde9fd1b7d/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /Users/konantian/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-28.0.0.aar/f489775e4cc4eaf5c67acd40763d1098/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /Users/konantian/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-28.0.0.aar/f489775e4cc4eaf5c67acd40763d1098/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] /Users/konantian/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/463ccd30df64bdf61b4c391ec4ed80ff/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] /Users/konantian/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0.aar/463ccd30df64bdf61b4c391ec4ed80ff/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/konantian/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/290b996dd76c6658eb2788b8c1f0821e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/konantian/.gradle/caches/transforms-1/files-1.1/versionedparcelable-28.0.0.aar/290b996dd76c6658eb2788b8c1f0821e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] /Users/konantian/.gradle/caches/transforms-1/files-1.1/cursoradapter-28.0.0.aar/384ad3fbff34f6bdb1312a98b01b42ba/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] /Users/konantian/.gradle/caches/transforms-1/files-1.1/cursoradapter-28.0.0.aar/384ad3fbff34f6bdb1312a98b01b42ba/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /Users/konantian/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/47386cb267288e1943a912484f660b33/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /Users/konantian/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/47386cb267288e1943a912484f660b33/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] /Users/konantian/.gradle/caches/transforms-1/files-1.1/documentfile-28.0.0.aar/39b6880b62c1d5c204824d329b9900b6/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] /Users/konantian/.gradle/caches/transforms-1/files-1.1/documentfile-28.0.0.aar/39b6880b62c1d5c204824d329b9900b6/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /Users/konantian/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-28.0.0.aar/8d5df7e107562a1c532521bf36c62ff3/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /Users/konantian/.gradle/caches/transforms-1/files-1.1/localbroadcastmanager-28.0.0.aar/8d5df7e107562a1c532521bf36c62ff3/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] /Users/konantian/.gradle/caches/transforms-1/files-1.1/print-28.0.0.aar/ce13f552f4017cbf923ebdef0b5aba4f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] /Users/konantian/.gradle/caches/transforms-1/files-1.1/print-28.0.0.aar/ce13f552f4017cbf923ebdef0b5aba4f/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /Users/konantian/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.1.aar/22a1cb3d4191bc8a33b8d3380c84e690/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /Users/konantian/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.1.aar/22a1cb3d4191bc8a33b8d3380c84e690/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /Users/konantian/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/3340bebd2d2770d3d31032c1e1b598d8/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /Users/konantian/.gradle/caches/transforms-1/files-1.1/livedata-1.1.1.aar/3340bebd2d2770d3d31032c1e1b598d8/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /Users/konantian/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/b9a5a8789500910f6fa21132aae7a2c2/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /Users/konantian/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/b9a5a8789500910f6fa21132aae7a2c2/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] /Users/konantian/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/b7d30cd61da2fe864f1ff6a8f9cdeb84/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] /Users/konantian/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/b7d30cd61da2fe864f1ff6a8f9cdeb84/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] /Users/konantian/.gradle/caches/transforms-1/files-1.1/interpolator-28.0.0.aar/8933432e82d59daa078e9807dea013b7/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] /Users/konantian/.gradle/caches/transforms-1/files-1.1/interpolator-28.0.0.aar/8933432e82d59daa078e9807dea013b7/AndroidManifest.xml:20:5-44
+INJECTED from /Users/konantian/wang17FeelsBook/app/src/main/AndroidManifest.xml
+INJECTED from /Users/konantian/wang17FeelsBook/app/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /Users/konantian/wang17FeelsBook/app/src/main/AndroidManifest.xml
+		ADDED from /Users/konantian/wang17FeelsBook/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/konantian/wang17FeelsBook/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/konantian/wang17FeelsBook/app/src/main/AndroidManifest.xml
+		ADDED from /Users/konantian/wang17FeelsBook/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/konantian/wang17FeelsBook/app/src/main/AndroidManifest.xml

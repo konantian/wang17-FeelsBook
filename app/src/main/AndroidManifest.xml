@@ -16,11 +16,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".EmotionEntry" />
-        <activity android:name=".joyEmotion" />
         <activity android:name=".history" />
         <activity android:name=".edit" />
-        <activity android:name=".recordEmotion"></activity>
+        <activity android:name=".recordEmotion" />
     </application>
 
 </manifest>

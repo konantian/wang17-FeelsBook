@@ -6,22 +6,22 @@
     density="560dpi"
     format="10"
     plugin-version="3.1.4"
-    timestamp="1538765283024"
+    timestamp="1538769351878"
     token="-1877476725516191361"
     verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="563" />
+        duration="364" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="73" />
+        duration="0" />
     <task
         name="verifier"
-        duration="20" />
+        duration="0" />
 
     <artifact
         location="/Users/konantian/wang17FeelsBook/app/build/intermediates/resources/instant-run/debug/resources-debug.apk"
@@ -30,22 +30,22 @@
         location="/Users/konantian/wang17FeelsBook/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
         type="SPLIT" />
     <artifact
-        location="/Users/konantian/wang17FeelsBook/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
-        type="SPLIT" />
-    <artifact
         location="/Users/konantian/wang17FeelsBook/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
         type="SPLIT" />
     <artifact
         location="/Users/konantian/wang17FeelsBook/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
         type="SPLIT" />
     <artifact
+        location="/Users/konantian/wang17FeelsBook/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
+        type="SPLIT" />
+    <artifact
         location="/Users/konantian/wang17FeelsBook/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
         type="SPLIT" />
     <artifact
-        location="/Users/konantian/wang17FeelsBook/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
+        location="/Users/konantian/wang17FeelsBook/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
         type="SPLIT" />
     <artifact
-        location="/Users/konantian/wang17FeelsBook/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
+        location="/Users/konantian/wang17FeelsBook/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
         type="SPLIT" />
     <artifact
         location="/Users/konantian/wang17FeelsBook/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
@@ -65,7 +65,7 @@
 
     <build
         build-mode="FULL"
-        timestamp="1538765283024"
+        timestamp="1538769351878"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="/Users/konantian/wang17FeelsBook/app/build/intermediates/resources/instant-run/debug/resources-debug.apk"
@@ -74,22 +74,22 @@
             location="/Users/konantian/wang17FeelsBook/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/konantian/wang17FeelsBook/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
-            type="SPLIT" />
-        <artifact
             location="/Users/konantian/wang17FeelsBook/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
             type="SPLIT" />
         <artifact
             location="/Users/konantian/wang17FeelsBook/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
             type="SPLIT" />
         <artifact
+            location="/Users/konantian/wang17FeelsBook/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
+            type="SPLIT" />
+        <artifact
             location="/Users/konantian/wang17FeelsBook/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/konantian/wang17FeelsBook/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
+            location="/Users/konantian/wang17FeelsBook/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/konantian/wang17FeelsBook/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
+            location="/Users/konantian/wang17FeelsBook/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
             type="SPLIT" />
         <artifact
             location="/Users/konantian/wang17FeelsBook/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
