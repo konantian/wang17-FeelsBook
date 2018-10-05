@@ -17,7 +17,7 @@ public class recordEmotion extends AppCompatActivity {
 
 
     //set some variables and the filename
-    private String initial_entry;
+    private String message;
     private static final String FILENAME = "history.sav";
 
     @Override
@@ -62,8 +62,8 @@ public class recordEmotion extends AppCompatActivity {
     //cancel button to back to the main page and save ang changes to local file
     public void cancel(View view){
 
-        initial_entry="\n";
-        saveFeels(initial_entry);
+        message="\n";
+        saveFeels(message);
         finish();
     }
 
@@ -77,8 +77,8 @@ public class recordEmotion extends AppCompatActivity {
         //locate the edittext area and get the user's input
 
         EditText editText= findViewById(R.id.comment);
-        initial_entry=editText.getText().toString()+"\n";
-        saveFeels(initial_entry);
+        message=editText.getText().toString()+"\n";
+        saveFeels(message);
         finish();
     }
 
