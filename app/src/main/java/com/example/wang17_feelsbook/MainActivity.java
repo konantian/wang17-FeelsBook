@@ -134,7 +134,7 @@ public class MainActivity extends AppCompatActivity{
                 startActivity(joy_intent);
 
                 //record the emotion and the date
-                saveFeels("Joy  "+current_time+"  |  ");
+                saveFeels("Joy  ["+current_time+"]  ");
 
                 //update the count for each emotion
                 update_count("joy");
@@ -150,7 +150,7 @@ public class MainActivity extends AppCompatActivity{
                 startActivity(sadness_intent);
 
                 //record the emotion and the date
-                saveFeels("Sadness   "+current_time+"  |  ");
+                saveFeels("Sadness   ["+current_time+"]  ");
                 //update the count for each emotion
                 update_count("sadness");
                 break;
@@ -164,7 +164,7 @@ public class MainActivity extends AppCompatActivity{
                 startActivity(love_intent);
 
                 //record the emotion and the date
-                saveFeels("Love   "+current_time+"  |  ");
+                saveFeels("Love   ["+current_time+"]  ");
                 //update the count for each emotion
                 update_count("love");
 
@@ -179,7 +179,7 @@ public class MainActivity extends AppCompatActivity{
                 startActivity(anger_intent);
 
                 //record the emotion and the date
-                saveFeels("Anger   "+current_time+"  |  ");
+                saveFeels("Anger   ["+current_time+"]  ");
                 //update the count for each emotion
                 update_count("anger");
 
@@ -194,7 +194,7 @@ public class MainActivity extends AppCompatActivity{
                 startActivity(surprise_intent);
 
                 //record the emotion and the date
-                saveFeels("Surprise   "+current_time+"  |  ");
+                saveFeels("Surprise   ["+current_time+"]  ");
                 //update the count for each emotion
                 update_count("surprise");
 
@@ -208,7 +208,7 @@ public class MainActivity extends AppCompatActivity{
                 startActivity(fear_intent);
 
                 //record the emotion and the date
-                saveFeels("Fear   "+current_time+"  |  ");
+                saveFeels("Fear   ["+current_time+"]  ");
                 //update the count for each emotion
                 update_count("fear");
 

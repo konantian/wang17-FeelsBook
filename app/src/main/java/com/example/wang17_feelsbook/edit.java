@@ -32,7 +32,7 @@ import com.google.gson.reflect.TypeToken;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
-import java.io.File;
+
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -40,11 +40,11 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.lang.reflect.Type;
-import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-import java.nio.file.Paths;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.List;
+import java.util.Date;
+import java.util.Locale;
 
 public class edit extends AppCompatActivity {
 
@@ -148,12 +148,12 @@ public class edit extends AppCompatActivity {
 
     //when user changed the record, we detect if user changed the emotion
     @RequiresApi(api = Build.VERSION_CODES.O)
-    public void save(View view) throws IOException {
+    public void save(View view) throws IOException, ParseException {
         stringToPassBack= edit_text.getText().toString();
 
         //get the substring to compare if two emtions are equal or not
-        String stringA = content.substring(0,content.indexOf("2")).trim();
-        String stringB = stringToPassBack.substring(0,stringToPassBack.indexOf("2")).trim();
+        String stringA = content.substring(0,content.indexOf("[")).trim();
+        String stringB = stringToPassBack.substring(0,stringToPassBack.indexOf("[")).trim();
 
         if(!stringA.equals(stringB)){
             update_count(stringA,-1);
@@ -164,13 +164,52 @@ public class edit extends AppCompatActivity {
         records.set(location,stringToPassBack);
         deleteFile(FILENAME);
 
+        //get the sorted records
+        ArrayList<String> sorted_records=sort(records);
+
+        for(String test:sorted_records){
+            System.out.println(test);
+        }
+
         //write the updates to file
-        for(int i=0;i<records.size();i++){
-            saveNew(records.get(i)+"\n");
+        for(int i=0;i<sorted_records.size();i++){
+            saveNew(sorted_records.get(i)+"\n");
         }
 
         finish();
     }
+
+    //sort all dates
+
+    public ArrayList<String> sort(ArrayList<String> records) throws ParseException {
+        ArrayList<String> newList=new ArrayList<>();
+        newList.add(records.get(0));
+        for(int i = 1;i<records.size();i++){
+            String current=records.get(i);
+            if(compare(newList.get(i-1),current)){
+                newList.add(current);
+            }
+            else{
+                newList.add(0,current);
+            }
+        }
+
+        return newList;
+    }
+
+    //compare two dates for sorting
+    public Boolean compare(String dateA,String dateB) throws ParseException {
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'hh:mm:ss", Locale.CANADA);
+        String a=dateA.substring(dateA.indexOf("[")+1,dateA.indexOf("]"));
+        String b=dateB.substring(dateB.indexOf("[")+1,dateB.indexOf("]"));
+
+        Date dayA=sdf.parse(a);
+        Date dayB=sdf.parse(b);
+
+        return dayB.after(dayA);
+
+    }
+
 
     //delete the record and minus the count by 1
     public void delete(View view){
