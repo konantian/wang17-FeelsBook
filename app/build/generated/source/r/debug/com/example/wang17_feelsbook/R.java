@@ -3200,8 +3200,8 @@ public final class R {
     public static final int activity_edit=0x7f09001c;
     public static final int activity_emotion_entry=0x7f09001d;
     public static final int activity_history=0x7f09001e;
-    public static final int activity_joy_emotion=0x7f09001f;
-    public static final int activity_main=0x7f090020;
+    public static final int activity_main=0x7f09001f;
+    public static final int activity_record_emotion=0x7f090020;
     public static final int list_item=0x7f090021;
     public static final int notification_action=0x7f090022;
     public static final int notification_action_tombstone=0x7f090023;

@@ -129,7 +129,7 @@ public class MainActivity extends AppCompatActivity{
             case R.id.joy:
 
                 //jump to a new activity to ask user if they want comment
-                Intent joy_intent = new Intent(MainActivity.this, joyEmotion.class);
+                Intent joy_intent = new Intent(MainActivity.this, recordEmotion.class);
                 joy_intent.putExtra("emotion","joy");
                 startActivity(joy_intent);
 
@@ -145,7 +145,7 @@ public class MainActivity extends AppCompatActivity{
             case R.id.sadness:
 
                 //jump to a new activity to ask user if they want comment
-                Intent sadness_intent = new Intent(MainActivity.this, joyEmotion.class);
+                Intent sadness_intent = new Intent(MainActivity.this, recordEmotion.class);
                 sadness_intent.putExtra("emotion","sadness");
                 startActivity(sadness_intent);
 
@@ -159,7 +159,7 @@ public class MainActivity extends AppCompatActivity{
             case R.id.love:
 
                 //jump to a new activity to ask user if they want comment
-                Intent love_intent = new Intent(MainActivity.this, joyEmotion.class);
+                Intent love_intent = new Intent(MainActivity.this, recordEmotion.class);
                 love_intent.putExtra("emotion","love");
                 startActivity(love_intent);
 
@@ -174,7 +174,7 @@ public class MainActivity extends AppCompatActivity{
             case R.id.anger:
 
                 //jump to a new activity to ask user if they want comment
-                Intent anger_intent = new Intent(MainActivity.this, joyEmotion.class);
+                Intent anger_intent = new Intent(MainActivity.this, recordEmotion.class);
                 anger_intent.putExtra("emotion","anger");
                 startActivity(anger_intent);
 
@@ -189,7 +189,7 @@ public class MainActivity extends AppCompatActivity{
             case R.id.surprise:
 
                 //jump to a new activity to ask user if they want comment
-                Intent surprise_intent = new Intent(MainActivity.this, joyEmotion.class);
+                Intent surprise_intent = new Intent(MainActivity.this, recordEmotion.class);
                 surprise_intent.putExtra("emotion","surprise");
                 startActivity(surprise_intent);
 
@@ -203,7 +203,7 @@ public class MainActivity extends AppCompatActivity{
             case R.id.fear:
 
                 //jump to a new activity to ask user if they want comment
-                Intent fear_intent = new Intent(MainActivity.this, joyEmotion.class);
+                Intent fear_intent = new Intent(MainActivity.this, recordEmotion.class);
                 fear_intent.putExtra("emotion","fear");
                 startActivity(fear_intent);
 

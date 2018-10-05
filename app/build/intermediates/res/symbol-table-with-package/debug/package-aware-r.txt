@@ -865,8 +865,8 @@ int layout abc_tooltip 0x7f09001b
 int layout activity_edit 0x7f09001c
 int layout activity_emotion_entry 0x7f09001d
 int layout activity_history 0x7f09001e
-int layout activity_joy_emotion 0x7f09001f
-int layout activity_main 0x7f090020
+int layout activity_main 0x7f09001f
+int layout activity_record_emotion 0x7f090020
 int layout list_item 0x7f090021
 int layout notification_action 0x7f090022
 int layout notification_action_tombstone 0x7f090023
