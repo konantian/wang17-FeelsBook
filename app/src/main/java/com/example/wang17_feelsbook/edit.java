@@ -43,6 +43,8 @@ import java.lang.reflect.Type;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Date;
 import java.util.Locale;
 
@@ -164,52 +166,34 @@ public class edit extends AppCompatActivity {
         records.set(location,stringToPassBack);
         deleteFile(FILENAME);
 
-        //get the sorted records
-        ArrayList<String> sorted_records=sort(records);
-
-        for(String test:sorted_records){
-            System.out.println(test);
-        }
+        //sort the records by date
+        Collections.sort(records, new StringDateComparator());
+        /////
 
         //write the updates to file
-        for(int i=0;i<sorted_records.size();i++){
-            saveNew(sorted_records.get(i)+"\n");
+        for(int i=0;i<records.size();i++){
+            saveNew(records.get(i)+"\n");
         }
 
         finish();
     }
 
-    //sort all dates
+    //sort all dates,code from
+    //https://stackoverflow.com/questions/15462814/sort-list-with-string-dates
+    class StringDateComparator implements Comparator<String>
+    {
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'hh:mm:ss", Locale.CANADA);
+        public int compare(String lhs, String rhs)
+        {
+            try {
+                return sdf.parse(lhs.substring(lhs.indexOf("[")+1,lhs.indexOf("]"))).compareTo(sdf.parse(rhs.substring(rhs.indexOf("[")+1,rhs.indexOf("]"))));
+            } catch (ParseException e) {
 
-    public ArrayList<String> sort(ArrayList<String> records) throws ParseException {
-        ArrayList<String> newList=new ArrayList<>();
-        newList.add(records.get(0));
-        for(int i = 1;i<records.size();i++){
-            String current=records.get(i);
-            if(compare(newList.get(i-1),current)){
-                newList.add(current);
-            }
-            else{
-                newList.add(0,current);
+                e.printStackTrace();
+                return -1;
             }
         }
-
-        return newList;
     }
-
-    //compare two dates for sorting
-    public Boolean compare(String dateA,String dateB) throws ParseException {
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'hh:mm:ss", Locale.CANADA);
-        String a=dateA.substring(dateA.indexOf("[")+1,dateA.indexOf("]"));
-        String b=dateB.substring(dateB.indexOf("[")+1,dateB.indexOf("]"));
-
-        Date dayA=sdf.parse(a);
-        Date dayB=sdf.parse(b);
-
-        return dayB.after(dayA);
-
-    }
-
 
     //delete the record and minus the count by 1
     public void delete(View view){
