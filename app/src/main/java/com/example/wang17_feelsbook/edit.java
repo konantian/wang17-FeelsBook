@@ -168,7 +168,6 @@ public class edit extends AppCompatActivity {
 
         //sort the records by date
         Collections.sort(records, new StringDateComparator());
-        /////
 
         //write the updates to file
         for(int i=0;i<records.size();i++){

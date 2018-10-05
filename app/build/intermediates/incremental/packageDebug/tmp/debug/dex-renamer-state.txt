@@ -1,13 +1,4 @@
-#Fri Oct 05 10:06:05 MDT 2018
-path.3=classes.dex
-path.2=classes.dex
-path.1=classes.dex
+#Fri Oct 05 11:43:53 MDT 2018
+base.0=/Users/konantian/wang17FeelsBook/app/build/intermediates/transforms/dexMerger/debug/50
 path.0=classes.dex
-renamed.3=classes4.dex
-renamed.2=classes3.dex
-renamed.1=classes2.dex
 renamed.0=classes.dex
-base.3=/Users/konantian/wang17FeelsBook/app/build/intermediates/transforms/dexMerger/debug/48
-base.2=/Users/konantian/wang17FeelsBook/app/build/intermediates/transforms/dexMerger/debug/45
-base.1=/Users/konantian/wang17FeelsBook/app/build/intermediates/transforms/dexMerger/debug/47
-base.0=/Users/konantian/wang17FeelsBook/app/build/intermediates/transforms/dexMerger/debug/46

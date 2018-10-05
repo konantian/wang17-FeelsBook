@@ -1,19 +1,7 @@
 #Internal package file, do not edit.
-#Fri Oct 05 10:06:05 MDT 2018
-1.base=/Users/konantian/wang17FeelsBook/app/build/intermediates/transforms/dexMerger/debug/47
-2.path=classes.dex
+#Fri Oct 05 11:43:53 MDT 2018
 0.baseType=DIRECTORY
-3.baseType=DIRECTORY
-2.base=/Users/konantian/wang17FeelsBook/app/build/intermediates/transforms/dexMerger/debug/46
-3.set=DEX
-2.set=DEX
-1.baseType=DIRECTORY
-3.path=classes.dex
-count=4
-1.set=DEX
+0.base=/Users/konantian/wang17FeelsBook/app/build/intermediates/transforms/dexMerger/debug/50
 0.path=classes.dex
-3.base=/Users/konantian/wang17FeelsBook/app/build/intermediates/transforms/dexMerger/debug/45
 0.set=DEX
-0.base=/Users/konantian/wang17FeelsBook/app/build/intermediates/transforms/dexMerger/debug/48
-2.baseType=DIRECTORY
-1.path=classes.dex
+count=1
