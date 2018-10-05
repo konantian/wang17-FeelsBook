@@ -25,6 +25,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Toast;
+
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -89,6 +91,8 @@ public class joyEmotion extends AppCompatActivity {
     //post button to add user's comment to the history data
     public void post(View view){
 
+        //promopt to user that comments saved already
+        Toast.makeText(this,"Successful saved the comments",Toast.LENGTH_SHORT).show();
         //setResult(RESULT_OK);
         //locate the edittext area and get the user's input
 
